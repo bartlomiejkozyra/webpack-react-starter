@@ -1,0 +1,46 @@
+{
+  "name": "webpack-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base src/ --env.development",
+    "prebuild": "npm run clean",
+    "build": "webpack",
+    "prod": "npm run build -- -p --env.production",
+    "clean": "rimraf dist",
+    "server": "http-server dist -p 8080 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "babel-loader": "^8.0.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "v4.0.0-alpha.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "0.9.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
